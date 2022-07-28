@@ -22,7 +22,7 @@ export default function CheckboxListSecondary(props: any) {
   };
 
   return (
-    <List dense sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List dense sx={{ width: '100%', maxWidth: 360 }}>
       {props.tarefas.map((tarefa: any) => {
         const labelId = `checkbox-list-secondary-label-${tarefa.id}`;
         return (
@@ -31,7 +31,6 @@ export default function CheckboxListSecondary(props: any) {
             secondaryAction={
               <Checkbox
                 edge="end"
-                onChange={handleToggle(tarefa.id)}
                 checked={tarefa.completed}
                 inputProps={{ 'aria-labelledby': labelId }}
               />
