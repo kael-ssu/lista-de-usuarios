@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import reactLogo from "../assets/react.svg";
 import "../App.css";
 import GutterlessList from "../components/GutterlessList";
 import Typography from '@mui/material/Typography';
+import { Container } from "@mui/material";
+
 
 const App = (props: any) => {
 	const [users, setUsers] = useState([
@@ -17,16 +18,13 @@ const App = (props: any) => {
 			.then((json) => {setUsers(json); setLoading(false)});
 	});
 	return (
-		<div className="App">
+		<Container className="App">
 			<Typography variant='h3'>Usuários:</Typography>
-			<div className="card">
+			<Container className="card">
 				{loading ? <Typography variant='h5'>Carregando...</Typography> : null}
-				
 				<GutterlessList users={users} />
-				
-			</div>
-
-		</div>
+			</Container>
+		</Container>
 	);
 };
 
