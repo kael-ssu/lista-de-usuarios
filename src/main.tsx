@@ -2,9 +2,28 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './pages/App'
 import './index.css'
+import { BrowserRouter, Routes, Route, } from "react-router-dom"
+import Tarefas from './pages/Tarefas'
+import Posts from './pages/Posts'
+import Alert from '@mui/material/Alert'
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="tarefas/:userId" element={<Tarefas />} />
+        <Route path="posts/:userId" element={<Posts />} />
+        <Route
+          path="*"
+          element={
+            <Alert variant="filled" severity="warning">
+              Não há nada aqui...
+            </Alert>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 )
