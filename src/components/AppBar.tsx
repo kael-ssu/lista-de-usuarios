@@ -11,7 +11,7 @@ import { Grid } from '@mui/material';
 
 export default function ButtonAppBar(props: any) {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, marginBottom: 6 }}>
       <AppBar position="static">
         <Toolbar>
           <Grid container justifyContent="space-between" alignContent="center">
