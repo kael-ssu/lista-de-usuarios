@@ -6,6 +6,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import Comments from './Comments';
+
 
 export default function PostList(props: any) {
   return (
@@ -28,6 +30,7 @@ export default function PostList(props: any) {
                   >
                     {post.body}
                   </Typography>
+                  <Comments post={post.id} />
                 </React.Fragment>
               }
             />
