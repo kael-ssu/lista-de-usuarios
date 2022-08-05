@@ -5,7 +5,7 @@ import AppBar  from "../components/AppBar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-const Posts = (props: any) => {
+const Posts = () => {
 	let params = useParams();
 
 	const [posts, setPosts] = useState([
