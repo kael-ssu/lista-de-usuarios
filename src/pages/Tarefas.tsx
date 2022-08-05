@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import AppBar from "../components/AppBar";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const Tarefas = () => {
 	let params = useParams();
@@ -21,6 +22,7 @@ const Tarefas = () => {
 	});
 	return (
 		<Container className="Tasks">
+			<CssBaseline />
 			<AppBar userId={params.userId} pagina="tarefas" />
 			<Typography variant='h3'>Tarefas:</Typography>
 			<Container className="card">

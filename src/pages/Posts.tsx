@@ -4,6 +4,7 @@ import PostList from "../components/PostList";
 import AppBar  from "../components/AppBar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const Posts = () => {
 	let params = useParams();
@@ -21,6 +22,7 @@ const Posts = () => {
 	});
 	return (
 		<Container className="Tasks">
+			<CssBaseline />
 			<AppBar userId={params.userId} pagina="posts" />
 			<Typography variant='h3'>Posts:</Typography>
 			<div className="card">

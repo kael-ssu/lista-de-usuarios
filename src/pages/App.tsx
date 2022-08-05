@@ -4,6 +4,7 @@ import GutterlessList from "../components/GutterlessList";
 import Typography from '@mui/material/Typography';
 import { Button, Container, Grid } from "@mui/material";
 import { useParams } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const AppLoginLogoutButton = (props: any) => {
 	if (!props.login()) {
@@ -49,6 +50,7 @@ const App = () => {
 	});
 	return (
 		<Container className="App" >
+			<CssBaseline />
 			<AppLoginLogoutButton login={isUserLogged} onLogout={() => setSessionId("")} />
 
 			<Container>
